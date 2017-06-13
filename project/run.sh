@@ -6,10 +6,10 @@ shellPid=""
 re='^[0-9]+$'
 while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
-	echo "test"
 	shellPid=`ps -U demo -o pid= | xargs`
-	echo "lol $shellPid lol"
 done
+
+echo `readlink "/proc/$shellPid/cwd"`
 
 echo 'Try to create the file /tmp/result'
 while [ ! -f /tmp/result ]
