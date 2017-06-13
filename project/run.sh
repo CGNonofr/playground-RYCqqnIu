@@ -10,11 +10,16 @@ while ! [[ $shellPid =~ $re ]]; do
 	shellPid=`ps -U demo -o pid= | xargs`
 	echo "lol $shellPid lol"
 done
-echo "test" > "/proc/$shellPid/fd/1"
 
+echo 'Try to create the file /tmp/result'
 while [ ! -f /tmp/result ]
 do
   sleep 1
 done
+echo 'Yeah, now write "toto" in it'
+while ! grep "toto" /tmp/result ; do
+	sleep 1
+done 
+echo 'Congratulations'
 echo "CG> success"
 sleep 2
