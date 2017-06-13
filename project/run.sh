@@ -2,7 +2,9 @@
 useradd demo
 echo "CG> terminal -s bash -u demo"
 
+sleep 2
 psResult=`ps -U demo -o pid=`
+ 
 psResultArr=($psResult)
 shellPid=${psResultArr[1]}
 echo $shellPid
