@@ -8,6 +8,7 @@ while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
 	echo "test"
 	psResult=`ps -U demo -o pid=`
+	echo $psResult
 	psResultArr=($psResult)
 	shellPid=${psResultArr[1]}
 	echo $shellPid
