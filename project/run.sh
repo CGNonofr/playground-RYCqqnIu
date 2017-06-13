@@ -8,7 +8,8 @@ while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
 	shellPid=`ps -U demo -o pid= | xargs`
 done
-
+echo "/proc/$shellPid/cwd"
+readlink "/proc/$shellPid/cwd"
 echo `readlink "/proc/$shellPid/cwd"`
 
 echo 'Try to create the file /tmp/result'
