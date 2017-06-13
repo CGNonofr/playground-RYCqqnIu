@@ -1,1 +1,1 @@
-@[Terminal]({"command": "/bin/bash /project/target/run.sh"})
+@[Terminal]({"command": "/project/target/run.sh"})

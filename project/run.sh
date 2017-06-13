@@ -1,4 +1,5 @@
-node app.js &
-echo "CG> success true"
-echo "CG> terminal"
+#!/bin/bash
+useradd demo
+echo "CG> terminal -s bash -u demo"
+
 sleep 1000
