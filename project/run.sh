@@ -1,6 +1,5 @@
 #!/bin/bash
 useradd demo
-echo "CG> terminal -s bash"
 echo "CG> terminal -s bash -u demo"
 shellPid=""
 re='^[0-9]+$'
