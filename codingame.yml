@@ -1,10 +1,10 @@
-title : SQL Injection demo
+title : Privilege escalation
 plan:
-  - title: SQL Injection
-    statement: markdowns/part1.md
+  - title: Privilege escalation
+    statement: statement.md
 projects:
-  sql-injection:
+  privilege-escalation:
     root: /project
     runner:
-      name: codingame/node-npm-runner
-      version: 1.1.0-node-7.4
+      name: library/bash
+      version: 4.4.12
