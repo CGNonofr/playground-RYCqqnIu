@@ -17,4 +17,4 @@ password: unknown' or '1'='1
 
 And observe carrefully the value of the SQL query displayed in the log section.
 
-@[Run application]({"stubs": ['app.js', 'run.sh', 'index.html', 'style.css'], "command": "/bin/bash /project/target/run.sh"})
+@[Run application]({"command": "/bin/bash /project/target/run.sh"})
