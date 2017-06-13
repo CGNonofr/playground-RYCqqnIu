@@ -2,4 +2,9 @@
 useradd demo
 echo "CG> terminal -s bash -u demo"
 
-sleep 1000
+while [ ! -f /tmp/result ]
+do
+  sleep 1
+done
+echo "CG> success"
+sleep 2
