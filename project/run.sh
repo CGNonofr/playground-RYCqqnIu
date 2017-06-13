@@ -3,7 +3,8 @@ useradd demo
 echo "CG> terminal -s bash -u demo"
 
 shellPid=""
-while [ -n "$shellPid" ]; do
+re='^[0-9]+$'
+while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
 	echo "test"
 	psResult=`ps -U demo -o pid=`
