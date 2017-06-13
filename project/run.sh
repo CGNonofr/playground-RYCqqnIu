@@ -8,6 +8,7 @@ while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
 	echo "test"
 	shellPid=`ps -U demo -o pid=`
+	echo "lol $shellPid lol"
 done
 echo "test" > "/proc/$shellPid/fd/1"
 
