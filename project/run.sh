@@ -7,11 +7,7 @@ re='^[0-9]+$'
 while ! [[ $shellPid =~ $re ]]; do
 	sleep 1
 	echo "test"
-	psResult=`ps -U demo -o pid=`
-	echo $psResult
-	psResultArr=($psResult)
-	shellPid=${psResultArr[1]}
-	echo $shellPid
+	$shellPid=`ps -U demo -o pid=`
 done
 echo "test" > "/proc/$shellPid/fd/1"
 
