@@ -1,6 +1,5 @@
 #!/bin/bash
-useradd demo
-echo "CG> terminal -s bash -u demo"
+echo "CG> terminal -s bash"
 shellPid=""
 re='^[0-9]+$'
 while ! [[ $shellPid =~ $re ]]; do
