@@ -1,2 +1,2 @@
-# Terminal3
+# Terminal4
 @[Terminal]({"command": "/bin/bash /project/target/run.sh"})
